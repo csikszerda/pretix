@@ -168,6 +168,8 @@
                                     {{ e.addon_to.attendee_name }}
                                 {% elif e.attendee_name %}
                                     {{ e.attendee_name }}
+                                {% elif e.order.invoice_address and e.order.invoice_address.name %}
+                                    {{ e.order.invoice_address.name }}
                                 {% endif %}
                             </td>
                             <td>
