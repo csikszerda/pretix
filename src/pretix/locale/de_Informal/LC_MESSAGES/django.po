@@ -11125,6 +11125,10 @@ msgstr "Prozentuale Stornogebühr berechnen"
 msgid "Do not allow cancellations after"
 msgstr "Stornierungen nur erlauben bis"
 
+#: pretix/base/settings.py:1995
+msgid "Customers can partially cancel their unpaid orders"
+msgstr "Kunden können unbezahlte Bestellungen teilweise stornieren"
+
 #: pretix/base/settings.py:1941
 msgid "Customers can cancel their paid orders"
 msgstr "Kunden können bezahlte Bestellungen stornieren"

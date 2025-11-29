@@ -1696,6 +1696,7 @@ class PartialCancellationTest(BaseOrdersTest):
     def setUp(self):
         super().setUp()
         self.event.settings.cancel_allow_user = True
+        self.event.settings.cancel_allow_user_partial = True
         self.order.status = Order.STATUS_PAID
         self.order.total = Decimal('0.00')
         self.order.save()
@@ -1777,3 +1778,15 @@ class PartialCancellationTest(BaseOrdersTest):
         assert self.order.status == Order.STATUS_PAID
         with scopes_disabled():
             assert self.order.payments.filter(provider='free', state=OrderPayment.PAYMENT_STATE_CONFIRMED).exists()
+
+    def test_partial_cancel_disabled(self):
+        self.event.settings.cancel_allow_user_partial = False
+        response = self.client.get(
+            '/%s/%s/order/%s/%s/cancel/partial' % (self.orga.slug, self.event.slug, self.order.code, self.order.secret),
+            follow=True
+        )
+        self.assertRedirects(
+            response,
+            '/%s/%s/order/%s/%s/' % (self.orga.slug, self.event.slug, self.order.code, self.order.secret),
+            target_status_code=200
+        )
