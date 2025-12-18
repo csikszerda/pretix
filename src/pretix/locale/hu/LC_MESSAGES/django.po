@@ -34135,3 +34135,47 @@ msgstr ""
 
 #~ msgid "Sale soon"
 #~ msgstr "Hamarosan kapható"
+
+#: pretix/presale/templates/pretixpresale/event/order.html:373
+msgid "If you only want to cancel some of your tickets, you can do so here without canceling the full order."
+msgstr "Ha csak bizonyos jegyeket szeretnél lemondani, itt megteheted a teljes rendelés lemondása nélkül."
+
+#: pretix/presale/templates/pretixpresale/event/order.html:378
+#: pretix/presale/templates/pretixpresale/event/order_partial_cancel.html:4
+#: pretix/presale/templates/pretixpresale/event/order_partial_cancel.html:11
+#: pretix/presale/templates/pretixpresale/event/order_partial_cancel.html:19
+#: pretix/presale/templates/pretixpresale/event/order_partial_cancel.html:31
+msgid "Cancel selected tickets"
+msgstr "Bizonyos jegyek lemondása"
+
+#: pretix/presale/templates/pretixpresale/event/order_partial_cancel.html:18
+msgid "Select the tickets you want to cancel. The remaining tickets in your order will stay valid."
+msgstr "Válaszd ki, hogy melyik jegyeket szeretnéd lemondani. A többi jegy érvényes marad."
+
+#: pretix/presale/templates/pretixpresale/event/order_partial_cancel.html:22
+msgid "Canceling a ticket that includes add-ons will also cancel those add-ons."
+msgstr "Egy kiegészítőkkel rendelkező jegy lemondása lemondja a kiegészítőit is."
+
+#: pretix/presale/templates/pretixpresale/event/order_partial_cancel.html:42
+msgid "Add-ons to this ticket will be canceled as well."
+msgstr "Ennek a jegynek a kiegészítői is le lesznek mondva."
+
+#: pretix/presale/templates/pretixpresale/event/order_partial_cancel.html:50
+msgid "Back to order"
+msgstr "Vissza a rendeléshez"
+
+#: pretix/presale/views/order.py:975
+msgid "You cannot partially cancel this order."
+msgstr "Nem mondhatod le részlegesen ezt a rendelést."
+
+#: pretix/presale/views/order.py:1000
+msgid "Please select at least one ticket to cancel."
+msgstr "Kérjük jelölj ki legalább egy jegyet amit le szeretnél mondani."
+
+#: pretix/presale/views/order.py:1028
+msgid "The tickets have been canceled, but the order could not be marked as paid automatically."
+msgstr "A kijelölt jegyek le lettek mondva, de a rendelést nem tudtuk automatikusan beállítani fizetettként."
+
+#: pretix/presale/views/order.py:1034
+msgid "The selected tickets have been canceled."
+msgstr "A kijelölt jegyek le lettek mondva."
